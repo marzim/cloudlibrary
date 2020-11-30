@@ -1,11 +1,18 @@
-namespace CloudManager.Models{
+namespace CloudManager.Decorators{
     using System;
+    using CloudManager.Models;
 
-    public class Database : IDatabase{
+    public class DBDecorator : IDatabase{
+        protected IDatabase database;
+
         private string _name;
         private string _adminUser;
         private string _adminPassword;
         private string _serverVersion;
+
+        protected DBDecorator(IDatabase _database){
+            this.database = _database;
+        }
 
         public string name{
             get { return _name; }
@@ -27,7 +34,8 @@ namespace CloudManager.Models{
             set { _serverVersion = value; }
         }
 
-        public void create(){}
-
+        public virtual void create(){
+            this.create();
+        }
     }
 }

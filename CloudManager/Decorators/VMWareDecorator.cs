@@ -1,9 +1,17 @@
 using System;
+using CloudManager.Models;
 
-namespace CloudManager.Models
+namespace CloudManager.Decorators
 {
-    public class VMWare : IVMWare
+    public class VMWareDecorator : IVMWare
     {
+        protected IVMWare _vmware;
+
+        protected VMWareDecorator(IVMWare vmware)
+        {
+            this._vmware = vmware;
+        }
+
         private string _name;
         private string _vNetName;
         private string _vNetAddress;    
@@ -53,7 +61,10 @@ namespace CloudManager.Models
             set{ _adminPassword = value; }
         }
 
-        public void create(){}
+        public void create()
+        {
+            _vmware.create();
+        }
     }
 
     
