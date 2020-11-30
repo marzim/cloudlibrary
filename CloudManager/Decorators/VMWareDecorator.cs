@@ -61,7 +61,7 @@ namespace CloudManager.Decorators
             set{ _adminPassword = value; }
         }
 
-        public void create()
+        public virtual void create()
         {
             _vmware.create();
         }

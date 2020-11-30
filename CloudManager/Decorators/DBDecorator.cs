@@ -35,7 +35,7 @@ namespace CloudManager.Decorators{
         }
 
         public virtual void create(){
-            this.create();
+            database.create();
         }
     }
 }
