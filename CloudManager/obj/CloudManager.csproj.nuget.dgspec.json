@@ -42,7 +42,7 @@
             },
             "Microsoft.Azure.Management.Fluent": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[1.36.0, )"
             },
             "Microsoft.IdentityModel.Clients.ActiveDirectory": {
               "target": "Package",

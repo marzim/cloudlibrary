@@ -6828,7 +6828,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Microsoft.Azure.Management.Compute.Fluent >= 1.36.0",
-      "Microsoft.Azure.Management.Fluent >= *",
+      "Microsoft.Azure.Management.Fluent >= 1.36.0",
       "Microsoft.IdentityModel.Clients.ActiveDirectory >= 5.2.8",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -6874,7 +6874,7 @@
           },
           "Microsoft.Azure.Management.Fluent": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[1.36.0, )"
           },
           "Microsoft.IdentityModel.Clients.ActiveDirectory": {
             "target": "Package",
