@@ -3,7 +3,7 @@ using CloudManager.Models;
 
 namespace CloudManager.Decorators
 {
-    public class VMWareDecorator : IVMWare
+    public abstract class VMWareDecorator : IVMWare
     {
         protected IVMWare _vmware;
 
@@ -61,9 +61,9 @@ namespace CloudManager.Decorators
             set{ _adminPassword = value; }
         }
 
-        public virtual void create()
+        public virtual string create(ICredentials credentials)
         {
-            _vmware.create();
+           return _vmware.create(credentials);
         }
     }
 

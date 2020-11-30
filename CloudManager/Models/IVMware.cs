@@ -13,6 +13,6 @@ namespace CloudManager.Models
         string adminUser { get; set; }           
         string adminPassword { get; set; }
 
-        void create();
+        string create(ICredentials credentials);
     }
 }

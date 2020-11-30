@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\CloudManager\\CloudManager.csproj": {}
+    "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\cloudlibrary\\CloudManager\\CloudManager.csproj": {}
   },
   "projects": {
-    "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\CloudManager\\CloudManager.csproj": {
+    "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\cloudlibrary\\CloudManager\\CloudManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\CloudManager\\CloudManager.csproj",
+        "projectUniqueName": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\cloudlibrary\\CloudManager\\CloudManager.csproj",
         "projectName": "CloudManager",
-        "projectPath": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\CloudManager\\CloudManager.csproj",
+        "projectPath": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\cloudlibrary\\CloudManager\\CloudManager.csproj",
         "packagesPath": "C:\\Users\\marvin\\.nuget\\packages\\",
-        "outputPath": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\CloudManager\\obj\\",
+        "outputPath": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\cloudlibrary\\CloudManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marvin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -36,6 +36,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.IdentityModel.Clients.ActiveDirectory": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

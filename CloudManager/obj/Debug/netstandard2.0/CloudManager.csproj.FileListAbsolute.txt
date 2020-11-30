@@ -1,0 +1,9 @@
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\obj\Debug\netstandard2.0\CloudManager.csprojAssemblyReference.cache
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\obj\Debug\netstandard2.0\CloudManager.AssemblyInfoInputs.cache
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\obj\Debug\netstandard2.0\CloudManager.AssemblyInfo.cs
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\obj\Debug\netstandard2.0\CloudManager.csproj.CoreCompileInputs.cache
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\bin\Debug\netstandard2.0\CloudManager.deps.json
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\bin\Debug\netstandard2.0\CloudManager.dll
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\bin\Debug\netstandard2.0\CloudManager.pdb
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\obj\Debug\netstandard2.0\CloudManager.dll
+C:\mc185104\projects\cloudlib\CloudMngr\cloudlibrary\CloudManager\obj\Debug\netstandard2.0\CloudManager.pdb

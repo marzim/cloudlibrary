@@ -53,7 +53,7 @@ namespace CloudManager.Models
             set{ _adminPassword = value; }
         }
 
-        public void create(){}
+        public string create(ICredentials credentials){ return string.Empty;}
     }
 
     

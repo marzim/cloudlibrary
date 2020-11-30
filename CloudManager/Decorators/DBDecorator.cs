@@ -2,7 +2,7 @@ namespace CloudManager.Decorators{
     using System;
     using CloudManager.Models;
 
-    public class DBDecorator : IDatabase{
+    public abstract class DBDecorator : IDatabase{
         protected IDatabase database;
 
         private string _name;
@@ -34,8 +34,8 @@ namespace CloudManager.Decorators{
             set { _serverVersion = value; }
         }
 
-        public virtual void create(){
-            database.create();
+        public virtual string create(){
+            return this.database.create();
         }
     }
 }
