@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "smI2y170lCPscjT/QiFuGfP3mK80LQIxohbE+4B5Y987pP+cYuNkY8jEXb3s0qE6H9sI1NcuSc55VtwwFwRoqA==",
+  "success": true,
+  "projectFilePath": "C:\\mc185104\\projects\\cloudlib\\CloudMngr\\CloudManager\\CloudManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marvin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\marvin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
