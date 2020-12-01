@@ -1,11 +1,8 @@
 namespace CloudManager.Models
 {
     using System;
-
+    using CloudManager.Models;
     public interface ICloudProvider{
-        string name {get; set;}
-
-        string response { get; set; }
-
+       void create();
     }
 }

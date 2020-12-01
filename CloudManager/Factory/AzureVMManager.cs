@@ -1,51 +1,38 @@
-namespace CloudManager.Decorators{
-    
+namespace CloudManager.Factory{
     using System;
     using CloudManager.Models;
-    using Microsoft.Azure.Management.Compute.Fluent;
     using Microsoft.Azure.Management.Compute.Fluent.Models;
     using Microsoft.Azure.Management.Fluent;
     using Microsoft.Azure.Management.ResourceManager.Fluent;
-    using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
-    using Microsoft.WindowsAzure.Storage;
-    using Microsoft.WindowsAzure.Storage.Blob;
-
-    public class AzureVMDecorator : VMWareDecorator
-    {
-
+    public class AzureVMManager : ICloudProviderVMService{
         private ICredentials _credential;
-        private CloudManager.Models.IResourceGroup _resourceGroup;
         private IAzure _azure;
-        public AzureVMDecorator(IVMWare _vmware) : base(_vmware)
-        {
-            _credential = new Credentials();
-            _credential.clientID = "client1";
-            _credential.clientSecret = "this is very secret";
-            _credential.subscriptionID = "1234";
-            _credential.tenantID = "tenant1";
-            
-            _vmware.adminUser = "sampluser"; 
-            _vmware.adminPassword = "secretpassword";
-            _vmware.Name = "WinVM";
-            _vmware.vNetName = "az204VNET";            
-            _vmware.vNetAddress = "10.10.0.0/16";
-            _vmware.nicName = "az204NIC";
-            _vmware.subnetAddress = "10.10.0.0/24";
-            _vmware.subnetName = "az204Subnet";
+        private IVMWare _vmware;
+        private CloudManager.Models.IResourceGroup _resourceGroup;
+        public AzureVMManager(){
 
-            _resourceGroup = new ResourceGroup();
-            _resourceGroup.groupName = "resourceGroupName1";
-            _resourceGroup.location = "eastus";            
+        }
+        public IVMWare vmware
+        {
+             set{ _vmware = value; }  
         }
 
-        public override string create(ICredentials _credential)
-        {
-            authenticate();
-            createResourceGroup();
-            createVNWare();
-            return string.Empty;
-        }   
+        public CloudManager.Models.IResourceGroup resourceGroup
+         {
+             set{ _resourceGroup = value; }  
+        }
 
+        public ICredentials credentials 
+        {
+             set{ _credential = value; }  
+        }
+        public void create(){
+            if( _credential != null && _resourceGroup != null && _vmware != null){
+                authenticate();
+                createResourceGroup();
+                createVNWare();
+            }            
+        }
         private void authenticate(){
            var credentials = SdkContext.AzureCredentialsFactory
                             .FromServicePrincipal(_credential.clientID,
@@ -90,10 +77,11 @@ namespace CloudManager.Decorators{
                 .WithAdminPassword(_vmware.adminPassword)
                 .WithComputerName(_vmware.Name)
                 .WithSize(VirtualMachineSizeTypes.StandardDS2V2)
-                .Create();
+                .Create();                
         }
 
-        
+        public void deleteVM(){}
 
+        public void updateVM(){}
     }
 }

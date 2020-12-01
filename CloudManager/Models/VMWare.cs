@@ -13,6 +13,10 @@ namespace CloudManager.Models
         private string _adminUser;        
         private string _adminPassword; 
 
+        private ICredentials _credentials;
+
+        private IResourceGroup _resourceGroup;
+
         public string Name{
             get{ return _name; }
             set{ _name = value; }
@@ -53,7 +57,20 @@ namespace CloudManager.Models
             set{ _adminPassword = value; }
         }
 
-        public string create(ICredentials credentials){ return string.Empty;}
+        public ICredentials credentials{
+            set{ _credentials = value; }
+        }
+
+        public IResourceGroup resourceGroup{
+            set{ _resourceGroup = value;}
+        }
+
+        public void create(){}
+
+        public void delete(){}
+
+        public void update(){}
+
     }
 
     

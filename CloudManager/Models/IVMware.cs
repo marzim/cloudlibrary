@@ -13,6 +13,15 @@ namespace CloudManager.Models
         string adminUser { get; set; }           
         string adminPassword { get; set; }
 
-        string create(ICredentials credentials);
+        ICredentials credentials { set; }
+
+        IResourceGroup resourceGroup { set; }
+
+        void create();
+
+        void delete();
+
+        void update();
+
     }
 }
