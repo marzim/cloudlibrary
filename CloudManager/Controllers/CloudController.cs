@@ -4,20 +4,6 @@ namespace CloudManager.Controllers{
 
     public class CloudController{
 
-        private IVMWare _vmware;
-
-        private ResourceGroup _resourceGroup;
-
-        private CloudProvider _cloudProvider;
-
-        public CloudController(){}
-
-        public void CreateVMWare(){
-
-        }
-
-        public void CreateDatabase(){
-
-        }
+      
     }
 }

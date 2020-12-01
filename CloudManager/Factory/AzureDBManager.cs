@@ -25,11 +25,21 @@ namespace CloudManager.Factory{
         }
         public void create(){
             if( _credential != null && _resourceGroup != null && _vmware != null){
-            }                 
+                Console.WriteLine("Azure DB create");
+            }            
+            else{
+                Console.WriteLine("Azure properties null");
+            }                   
         }
 
-        public void deleteDB(){}
+        public void deleteDB()
+        {
+            Console.WriteLine("Deleting DB...");
+        }
 
-        public void updateDB(){}
+        public void updateDB()
+        {
+            Console.WriteLine("Updating DB...");
+        }
     }
 }

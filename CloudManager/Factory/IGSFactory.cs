@@ -4,9 +4,9 @@ namespace CloudManager.Factory{
     public class IGSFactory : CloudProviderFactory{
         public override ICloudProvider GetCloudProviderServices(string cloudProviderServices){
             switch(cloudProviderServices){
-                case "ManageVMWare":
+                case "IGSManageVMWare":
                     return new IGSVMManager();                
-                case "ManageDatabase":
+                case "IGSManageDatabase":
                     return new IGSDBManager();
                 default:
                     return null;

@@ -4,14 +4,14 @@ namespace CloudManager.Factory{
     public class AzureFactory : CloudProviderFactory{
         public override ICloudProvider GetCloudProviderServices(string cloudProviderServices){
             switch(cloudProviderServices){
-                case "ManageVMWare":
+                case "AzureManageVMWare":
                     return new AzureVMManager();                
-                case "ManageDatabase":
+                case "AzureManageDatabase":
                     return new AzureDBManager();
                 default:
                     return null;
                 
             }
-        }        
+        }
     }
 }

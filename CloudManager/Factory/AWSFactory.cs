@@ -4,9 +4,9 @@ namespace CloudManager.Factory{
     public class AWSFactory : CloudProviderFactory{
         public override ICloudProvider GetCloudProviderServices(string cloudProviderServices){
             switch(cloudProviderServices){
-                case "ManageVMWare":
+                case "AWSManageVMWare":
                     return new AWSVMManager();            
-                case "ManageDatabase":
+                case "AWSManageDatabase":
                     return new AWSDBManager();
                 default:
                     return null;

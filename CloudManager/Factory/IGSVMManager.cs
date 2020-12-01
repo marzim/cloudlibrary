@@ -24,7 +24,11 @@ namespace CloudManager.Factory{
         }
         public void create(){
             if( _credential != null && _resourceGroup != null && _vmware != null){
-            }                 
+              Console.WriteLine("IGS vm create");
+            }            
+            else{
+                Console.WriteLine("IGS properties null");
+            }               
         }
 
         public void deleteVM(){}

@@ -28,10 +28,14 @@ namespace CloudManager.Factory{
         }
         public void create(){
             if( _credential != null && _resourceGroup != null && _vmware != null){
-                authenticate();
+               /* authenticate();
                 createResourceGroup();
-                createVNWare();
+                createVNWare();*/
+                Console.WriteLine("azure vm create");
             }            
+            else{
+                Console.WriteLine("azure properties null");
+            }
         }
         private void authenticate(){
            var credentials = SdkContext.AzureCredentialsFactory
@@ -80,8 +84,14 @@ namespace CloudManager.Factory{
                 .Create();                
         }
 
-        public void deleteVM(){}
+        public void deleteVM()
+        {
+            Console.WriteLine("Deleting VM instance...");
+        }
 
-        public void updateVM(){}
+        public void updateVM()
+        {
+            Console.WriteLine("Updating VM instance...");
+        }
     }
 }

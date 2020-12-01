@@ -24,12 +24,22 @@ namespace CloudManager.Factory{
         }
         public void create(){
             if( _credential != null && _resourceGroup != null && _vmware != null){
-            }                 
+                 Console.WriteLine("aws vm create");
+            }            
+            else{
+                Console.WriteLine("aws properties null");
+            }            
         }
 
-        public void deleteVM(){}
+         public void deleteVM()
+        {
+            Console.WriteLine("Deleting VM instance...");
+        }
 
-        public void updateVM(){}
+        public void updateVM()
+        {
+            Console.WriteLine("Updating VM instance...");
+        }
 
         
     }
