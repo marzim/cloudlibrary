@@ -7,7 +7,6 @@ namespace CloudManager.Models{
         string adminPassword{ get;set; }
         string serverVersion{ get;set; }
 
-        string create();
 
     }
 }

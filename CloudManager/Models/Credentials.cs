@@ -4,9 +4,7 @@ namespace CloudManager.Models{
         private string _clientSecret;
         private string _tenantID;
         private string _subscriptionID;
-        private string _response;
-        private string _accessToken;
-
+        
         public string clientID
         {
             get{ return _clientID; } 
@@ -31,16 +29,6 @@ namespace CloudManager.Models{
             set{ _subscriptionID = value; }
         }
 
-        public string response
-        {
-            get{ return _response; } 
-            set{ _response = value; }
-        }
-
-        public string accessToken
-        {
-            get{ return _accessToken; } 
-            set{ _accessToken = value; }
-        }
+      
     }
 }

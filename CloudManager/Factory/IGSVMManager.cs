@@ -31,9 +31,15 @@ namespace CloudManager.Factory{
             }               
         }
 
-        public void deleteVM(){}
+         public void deleteVM()
+        {
+            Console.WriteLine("Deleting VM instance...");
+        }
 
-        public void updateVM(){}
+        public void updateVM()
+        {
+            Console.WriteLine("Updating VM instance...");
+        }
 
       
     }

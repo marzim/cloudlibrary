@@ -11,6 +11,6 @@ namespace CloudManager.Models{
         
         IResourceGroup resourceGroup {set;}
 
-        IVMWare vmware {set;}
+        IDatabase database {set;}
     }
 }

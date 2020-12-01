@@ -3,14 +3,14 @@ namespace CloudManager.Factory{
     using CloudManager.Models;
     public class IGSDBManager : ICloudProviderDBService{
         private ICredentials _credential;
-        private IVMWare _vmware;
+        private IDatabase _database;
         private CloudManager.Models.IResourceGroup _resourceGroup;
         public IGSDBManager(){
 
         }
-        public IVMWare vmware
+        public IDatabase database
         {
-             set{ _vmware = value; }  
+             set{ _database = value; }  
         }
 
         public CloudManager.Models.IResourceGroup resourceGroup
@@ -23,7 +23,7 @@ namespace CloudManager.Factory{
              set{ _credential = value; }  
         }
         public void create(){
-            if( _credential != null && _resourceGroup != null && _vmware != null){
+            if( _credential != null && _resourceGroup != null && _database != null){
                 Console.WriteLine("IGS DB create");
             }            
             else{
@@ -31,8 +31,14 @@ namespace CloudManager.Factory{
             }                       
         }
 
-        public void deleteDB(){}
+       public void deleteDB()
+        {
+            Console.WriteLine("Deleting DB...");
+        }
 
-        public void updateDB(){}
+        public void updateDB()
+        {
+            Console.WriteLine("Updating DB...");
+        }
     }
 }

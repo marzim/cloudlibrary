@@ -27,7 +27,7 @@ namespace CloudManager.Models{
             set { _serverVersion = value; }
         }
 
-        public string create(){ return "";}
+
 
     }
 }
